@@ -3,12 +3,15 @@ import Image from "next/image";
 import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 import Button from "@/components/Button";
+import Card from "@/components/Card";
 
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <div style={{ background: "white", padding: 100 }}>
-        <Button variant="primary">Hello</Button>
+        <Card variant="outlined">
+          <Button variant="primary">Hello</Button>
+        </Card>
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">

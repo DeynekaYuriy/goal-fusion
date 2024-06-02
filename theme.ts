@@ -10,6 +10,9 @@ const theme = {
       darkBlue: '#005bb5',
       darkGray: '#c0c0c0',
       darkRed: '#cc0000',
+      lightBlue: '#e0f7fa',
+      lightGray: '#f5f5f5',
+      lightRed: '#fdecea',
     },
     buttons: {
       primary: {
@@ -45,6 +48,44 @@ const theme = {
         transition: 'all 0.3s ease',
         '&:hover': {
           bg: 'darkRed',
+          boxShadow: '0 6px 8px rgba(0, 0, 0, 0.1)',
+        },
+      },
+    },
+    cards: {
+      solid: {
+        bg: 'blue',
+        color: 'white',
+        padding: '16px',
+        borderRadius: '8px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          boxShadow: '0 6px 8px rgba(0, 0, 0, 0.1)',
+        },
+      },
+      soft: {
+        bg: 'lightBlue',
+        color: 'black',
+        padding: '16px',
+        borderRadius: '8px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          boxShadow: '0 6px 8px rgba(0, 0, 0, 0.1)',
+        },
+      },
+      outlined: {
+        bg: 'white',
+        color: 'black',
+        borderColor: 'blue',
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        padding: '16px',
+        borderRadius: '8px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        transition: 'all 0.3s ease',
+        '&:hover': {
           boxShadow: '0 6px 8px rgba(0, 0, 0, 0.1)',
         },
       },
