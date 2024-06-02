@@ -7,7 +7,7 @@ interface RegisterRequestBody {
   email: string;
   password: string;
   name: string;
-  age?: number | null; // Making age optional
+  age?: number | null;
 }
 
 export default async function handler(
