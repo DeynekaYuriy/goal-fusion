@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
+import Typography from "@/components/Typography";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div style={{ background: "white", padding: 100 }}>
         <Card variant="outlined">
           <Button variant="primary">Hello</Button>
+          <Typography level={"heading1"}>Hello</Typography>
         </Card>
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
