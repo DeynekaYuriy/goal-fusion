@@ -50,18 +50,9 @@ const handler = async (req: AuthenticatedRequest, res: NextApiResponse) => {
     updates.age = age;
   }
 
-  if (password) {
-    if (password.length < 6) {
-      return res
-        .status(400)
-        .json({ message: "Password should be at least 6 characters long" });
-    }
-    updates.password = await bcrypt.hash(password, 10);
-  }
-
   await db
     .collection("users")
-    .updateOne({ _id: req.user.id }, { $set: updates });
+    .updateOne({ _id: new ObjectId(req.user.id) }, { $set: updates });
   const updatedUser = await db
     .collection("users")
     .findOne({ _id: new ObjectId(req.user.id) });
