@@ -126,7 +126,7 @@ export default function Home() {
         <SubHeading>8. Contact Us</SubHeading>
         <Paragraph>
           If you have any questions or concerns about this Policy, please
-          contact us at [contact email].
+          contact us at ipz213_dyum@student.ztu.edu.ua.
         </Paragraph>
       </Container>
     </ThemeProvider>
