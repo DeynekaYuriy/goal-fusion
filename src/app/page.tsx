@@ -1,113 +1,133 @@
-import Image from "next/image";
+"use client";
+import styled, { ThemeProvider } from "styled-components";
+import theme from "../../theme";
+
+const Container = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+`;
+
+const Heading = styled.h1`
+  font-size: 24px;
+  margin-bottom: 20px;
+`;
+
+const SubHeading = styled.h2`
+  font-size: 20px;
+  margin-bottom: 16px;
+`;
+
+const Paragraph = styled.p`
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+`;
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <Heading>Privacy Policy / End User License Agreement (EULA)</Heading>
+        <Paragraph>Last updated: [Date]</Paragraph>
+        <Paragraph>
+          This Privacy Policy / End User License Agreement (&quot;Policy&quot;)
+          describes how GoalFusion (&quot;we,&quot; &quot;us,&quot; or
+          &quot;our&quot;) collects, uses, and shares information about you when
+          you access or use our website, services, or applications
+          (&quot;Services&quot;).
+        </Paragraph>
+        <Paragraph>
+          By accessing or using our Services, you agree to this Policy. If you
+          do not agree to this Policy, please do not use our Services.
+        </Paragraph>
+        <SubHeading>1. Information We Collect</SubHeading>
+        <Paragraph>
+          We collect information about you when you provide it to us, when you
+          use our Services, and when other sources provide it to us. The types
+          of information we collect include:
+        </Paragraph>
+        <ul>
+          <li>
+            Personal Information: Information that can be used to identify you,
+            such as your name, email address, and any other information you
+            provide voluntarily.
+          </li>
+          <li>
+            Usage Information: Information about how you use our Services, such
+            as your interactions with our website, the content you view, and
+            your preferences.
+          </li>
+          <li>
+            Device Information: Information about your device, such as your IP
+            address, browser type, operating system, and device identifiers.
+          </li>
+          <li>
+            Cookies and Tracking Technologies: We use cookies and similar
+            tracking technologies to collect information about your interactions
+            with our Services.
+          </li>
+        </ul>
+        <SubHeading>2. How We Use Your Information</SubHeading>
+        <Paragraph>We use the information we collect to:</Paragraph>
+        <ul>
+          <li>Provide, maintain, and improve our Services.</li>
+          <li>
+            Communicate with you about our Services, including updates and
+            announcements.
+          </li>
+          <li>Personalize your experience and provide tailored content.</li>
+          <li>Analyze usage trends and optimize our Services.</li>
+          <li>Comply with legal obligations and enforce our policies.</li>
+        </ul>
+        <SubHeading>3. Information Sharing and Disclosure</SubHeading>
+        <Paragraph>We may share your information with:</Paragraph>
+        <ul>
+          <li>
+            Service Providers: We may share your information with third-party
+            service providers who help us operate our Services.
+          </li>
+          <li>
+            Business Partners: We may share your information with trusted
+            business partners who provide complementary services.
+          </li>
+          <li>
+            Legal Compliance: We may disclose your information to comply with
+            legal obligations or respond to lawful requests from government
+            authorities.
+          </li>
+        </ul>
+        <SubHeading>4. Data Retention</SubHeading>
+        <Paragraph>
+          We retain your information for as long as necessary to fulfill the
+          purposes outlined in this Policy or as required by law. We will delete
+          or anonymize your information when it is no longer needed.
+        </Paragraph>
+        <SubHeading>5. Your Rights</SubHeading>
+        <Paragraph>
+          You have certain rights regarding your information, including the
+          right to access, correct, or delete your information. Please contact
+          us if you would like to exercise these rights.
+        </Paragraph>
+        <SubHeading>6. GDPR Compliance</SubHeading>
+        <Paragraph>
+          We comply with the General Data Protection Regulation (GDPR) and other
+          applicable data protection laws. If you are a resident of the European
+          Economic Area (EEA), you have certain rights under GDPR, including the
+          right to access, rectify, or erase your personal data.
+        </Paragraph>
+        <SubHeading>7. Changes to This Policy</SubHeading>
+        <Paragraph>
+          We may update this Policy from time to time by posting the updated
+          version on our website. We encourage you to review this Policy
+          periodically for any changes.
+        </Paragraph>
+        <SubHeading>8. Contact Us</SubHeading>
+        <Paragraph>
+          If you have any questions or concerns about this Policy, please
+          contact us at [contact email].
+        </Paragraph>
+      </Container>
+    </ThemeProvider>
   );
 }
