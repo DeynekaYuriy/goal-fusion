@@ -18,7 +18,9 @@ export default async function handler(
     const { email, password, name, age } = req.body as RegisterRequestBody;
 
     if (!email || !password || !name) {
-      return res.status(400).json({ message: "Email, password, and name are required" });
+      return res
+        .status(400)
+        .json({ message: "Email, password, and name are required" });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -52,7 +54,7 @@ export default async function handler(
 
     const token = jwt.sign(
       { id: result.insertedId.id, email },
-      process.env.JWT_SECRET,
+      process.env.JWT_SECRET as string,
       { expiresIn: "1h" }
     );
 
