@@ -21,7 +21,7 @@ const handler = async (req: AuthenticatedRequest, res: NextApiResponse) => {
 
   const user = await db
     .collection("users")
-    .findOne({ _id: new ObjectId(req.user.id) });
+    .findOne({ _id: new ObjectId(req.user?.id) });
 
   if (!user) {
     return res.status(404).json({ message: "User not found" });
@@ -52,11 +52,11 @@ const handler = async (req: AuthenticatedRequest, res: NextApiResponse) => {
 
   await db
     .collection("users")
-    .updateOne({ _id: new ObjectId(req.user.id) }, { $set: updates });
+    .updateOne({ _id: new ObjectId(req.user?.id) }, { $set: updates });
   const updatedUser = await db
     .collection("users")
-    .findOne({ _id: new ObjectId(req.user.id) });
-  delete updatedUser.password;
+    .findOne({ _id: new ObjectId(req.user?.id) });
+  delete updatedUser?.password;
   return res
     .status(200)
     .json({ message: "Profile updated successfully", user: updatedUser });

@@ -7,7 +7,7 @@ const handler = async (req: AuthenticatedRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     const { db } = await connectToDatabase();
 
-    const user = await db.collection("users").findOne({ _id: new ObjectId(req.user.id) });
+    const user = await db.collection("users").findOne({ _id: new ObjectId(req.user?.id) });
     
     if (!user) {
       return res.status(404).json({ message: "User not found" });

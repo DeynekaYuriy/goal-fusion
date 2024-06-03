@@ -3,7 +3,7 @@ import Typography from "@/components/Typography";
 import { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 
-const withThemeProvider = (Story, context) => (
+const withThemeProvider = (Story: any, context: any) => (
   <ThemeProvider theme={theme}>
     <Story {...context} />
   </ThemeProvider>
