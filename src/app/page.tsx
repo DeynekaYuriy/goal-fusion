@@ -16,6 +16,7 @@ const Heading = styled.h1`
 const SubHeading = styled.h2`
   font-size: 20px;
   margin-bottom: 16px;
+  margin-top: 30px;
 `;
 
 const Paragraph = styled.p`
