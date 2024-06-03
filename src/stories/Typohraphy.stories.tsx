@@ -42,21 +42,7 @@ const meta = {
       control: {
         type: "radio",
       },
-      options: [
-        "normal",
-        "bold",
-        "bolder",
-        "lighter",
-        "100",
-        "200",
-        "300",
-        "400",
-        "500",
-        "600",
-        "700",
-        "800",
-        "900",
-      ],
+      options: ["normal", "bold", "bolder", "lighter"],
       description: "Font weight of the typography.",
     },
     textAlign: {
