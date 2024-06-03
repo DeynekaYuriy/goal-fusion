@@ -16,6 +16,7 @@ const Heading = styled.h1`
 const SubHeading = styled.h2`
   font-size: 20px;
   margin-bottom: 16px;
+  margin-top: 30px;
 `;
 
 const Paragraph = styled.p`
@@ -29,7 +30,7 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <Container>
         <Heading>Privacy Policy / End User License Agreement (EULA)</Heading>
-        <Paragraph>Last updated: [Date]</Paragraph>
+        <Paragraph>Last updated: 03.06.2024</Paragraph>
         <Paragraph>
           This Privacy Policy / End User License Agreement (&quot;Policy&quot;)
           describes how GoalFusion (&quot;we,&quot; &quot;us,&quot; or
@@ -125,7 +126,7 @@ export default function Home() {
         <SubHeading>8. Contact Us</SubHeading>
         <Paragraph>
           If you have any questions or concerns about this Policy, please
-          contact us at [contact email].
+          contact us at ipz213_dyum@student.ztu.edu.ua.
         </Paragraph>
       </Container>
     </ThemeProvider>
