@@ -26,15 +26,15 @@ interface ButtonProps
 }
 
 const Button = styled.button<ButtonProps>`
+  ${variant({
+    scale: "buttons",
+    variants: theme.buttons,
+  })}
   ${space}
   ${color}
   ${layout}
   ${typography}
   ${border}
-  ${variant({
-    scale: "buttons",
-    variants: theme.buttons,
-  })}
   cursor: pointer;
   border: none;
 

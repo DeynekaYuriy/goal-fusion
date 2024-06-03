@@ -26,15 +26,15 @@ interface CardProps
 }
 
 const Card = styled.div<CardProps>`
+  ${variant({
+    scale: "cards",
+    variants: theme.cards,
+  })}
   ${space}
   ${color}
   ${layout}
   ${typography}
   ${border}
-  ${variant({
-    scale: "cards",
-    variants: theme.cards,
-  })}
 `;
 
 export default Card;
