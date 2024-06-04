@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "storybook build -s public",
     "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
